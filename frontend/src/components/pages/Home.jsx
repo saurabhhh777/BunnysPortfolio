@@ -3,16 +3,16 @@ import {Github, Globe} from "lucide-react";
 
 export default function Home() {
   const projects = [
-    { name: "ThePrimeTime", repo: "#", site: "#", description: "A VS Code screen time analyzer to track your coding habits.", techStack: "React, Node.js, MongoDB, Express", type: "Web 2" },
-    { name: "ChatApp", repo: "#", site: "#", description: "A real-time chat application with end-to-end encryption.", techStack: "MongoDB, Express.js, React.js, Node.js ", type: "Web 2" },
-    { name: "FaceDetection", repo: "#", site: "#", description: "A face detection app leveraging AI-powered models.", techStack: "TensorFlow.js, React", type: "Web 2" },
-    { name: "Image Converter", repo: "#", site: "#", description: "A tool to convert images between different formats effortlessly.", techStack: "Express, React, Node, TypeScript", type: "Web 2" },
-    { name: "Solana Devnet Faucet", repo: "#", site: "#", description: "A faucet to distribute Solana Devnet tokens.", techStack: "Solana, React", type: "Web 3" },
-    { name: "SecondBrainApp", repo: "#", site: "#", description: "A digital second brain to store and organize your thoughts.", techStack: "MongoDb, Express.js, React.js, Node.js", type: "Web 2" },
-    { name: "JobPortalBackend", repo: "#", site: "#", description: "Backend services for a job portal, supporting authentication and job listings.", techStack: "Node.js, Express.js, MongoDB", type: "Web 2" },
-    { name: "URL Shortener", repo: "#", site: "#", description: "A simple URL shortener service built with MERN stack.", techStack: "MongoDb, Express.js, React.js, Node.js", type: "Web 2" },
-    { name: "EasyStayBackend", repo: "#", site: "#", description: "A rental property management platform.", techStack: "Express.js, MongoDB, Node.js", type: "Web 2" },
-    { name: "TokenLaunchPad", repo: "#", site: "#", description: "A platform to launch and manage new crypto tokens.", techStack: "Solana, React", type: "Web 3" }
+    { name: "ThePrimeTime", repo: "https://github.com/saurabhhh777/ThePrimeTime.git", site: "#", description: "A VS Code screen time analyzer to track your coding habits.", techStack: "React, Node.js, MongoDB, Express", type: "Web 2" },
+    { name: "ChatApp", repo: "https://github.com/saurabhhh777/ChatApp.git", site: "#", description: "A real-time chat application with end-to-end encryption.", techStack: "MongoDB, Express.js, React.js, Node.js ", type: "Web 2" },
+    { name: "FaceDetection", repo: "https://github.com/saurabhhh777/FaceDetection.git", site: "https://appface-detect.vercel.app/", description: "A face detection app leveraging AI-powered models.", techStack: "TensorFlow.js, React", type: "Web 2" },
+    { name: "Image Converter", repo: "https://github.com/saurabhhh777/ImgConverter.git", site: "#", description: "A tool to convert images between different formats effortlessly.", techStack: "Express, React, Node, TypeScript", type: "Web 2" },
+    { name: "Solana Devnet Faucet", repo: "https://github.com/saurabhhh777/SolanaDevnetFaucet.git", site: "https://solana-devnet-faucet-five.vercel.app/", description: "A faucet to distribute Solana Devnet tokens.", techStack: "Solana, React", type: "Web 3" },
+    { name: "SecondBrainApp", repo: "https://github.com/saurabhhh777/BrainlyApp.git", site: "#", description: "A digital second brain to store and organize your thoughts.", techStack: "MongoDb, Express.js, React.js, Node.js", type: "Web 2" },
+    { name: "JobPortalBackend", repo: "https://github.com/saurabhhh777/JobPortalBackend.git", site: "#", description: "Backend services for a job portal, supporting authentication and job listings.", techStack: "Node.js, Express.js, MongoDB", type: "Web 2" },
+    { name: "URL Shortener", repo: "https://github.com/saurabhhh777/URLShortner.git", site: "https://l2s-xovy.onrender.com/", description: "A simple URL shortener service built with MERN stack.", techStack: "MongoDb, Express.js, React.js, Node.js", type: "Web 2" },
+    { name: "EasyStayBackend", repo: "https://github.com/saurabhhh777/Easy-Stay-edit.git", site: "#", description: "A rental property management platform.", techStack: "Express.js, MongoDB, Node.js", type: "Web 2" },
+    { name: "TokenLaunchPad", repo: "https://github.com/saurabhhh777/TokenLaunchPad.git", site: "https://token-launch-pad.vercel.app/", description: "A platform to launch and manage new crypto tokens.", techStack: "Solana, React", type: "Web 3" }
   ];
 
   return (
