@@ -26,7 +26,8 @@ git clone https://github.com/yourusername/your-portfolio.git
 cd BunnysPortfolio
 cd frontend
 npm install
-npm start
+npm start 
+```
 
 
 
