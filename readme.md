@@ -28,7 +28,9 @@ cd frontend
 npm install
 npm start
 
+
+
 ## 📞 Contact Me
-- LinkedIn: [Saurabh Maurya](https://www.linkedin.com/in/saurabh-maurya-92b727245/)
-- Twitter: [@saurabhhh777](https://twitter.com/saurabhhh777)
-- Email: saurabhhhere@gmail.com
+LinkedIn: [Saurabh Maurya](https://www.linkedin.com/in/saurabh-maurya-92b727245/)
+Twitter: [@saurabhhh777](https://twitter.com/saurabhhh777)
+Email: saurabhhhere@gmail.com
