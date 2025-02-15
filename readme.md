@@ -11,7 +11,7 @@ Welcome to my personal portfolio website! This showcases my projects, skills, an
 - Vercel (for deployment)
 
 ## 📸 Screenshots
-![Portfolio Screenshot](https://github.com/user-attachments/assets/27086487-8705-45a9-9f19-282eb0f12191)
+![Portfolio Screenshot](https://github.com/user-attachments/assets/88e4ece4-aea9-47a3-b407-5468eb7dd3c7)
 ![Portfolio Screenshot](https://github.com/user-attachments/assets/91594960-d777-48bf-a5f1-dc68f91bb740)
 ![Portfolio Screenshot](https://github.com/user-attachments/assets/eb8afa57-0e44-4a18-b016-a744012c6637)
 
