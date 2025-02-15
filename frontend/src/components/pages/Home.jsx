@@ -154,13 +154,13 @@ export default function Home() {
               <div className="flex flex-row justify-between mt-2 pl-10 pr-10">
                 <a
                   href={project.repo}
-                  className="text-blue-400 hover:underline"
+                  className="text-blue-400 hover:text-blue-900"
                 >
-                  <Github size={"35"} />
+                  <Github size={"35"}/>
                 </a>
                 <a
                   href={project.site}
-                  className="text-green-400 hover:underline"
+                  className="text-green-400 hover:text-green-700"
                 >
                   <Globe size={"35"} />
                 </a>
