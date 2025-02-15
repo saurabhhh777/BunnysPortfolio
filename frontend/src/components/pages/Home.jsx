@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Github, Globe } from "lucide-react";
+import GitHubCalendar from "react-github-calendar";
+
 
 export default function Home() {
   const projects = [
@@ -113,12 +115,16 @@ export default function Home() {
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mt-4 font-jost">
           <span className="bg-gray-800 px-4 py-2 rounded-lg">MERN Stack</span>
-          <span className="bg-gray-800 px-4 py-2 rounded-lg">Blockchain</span>
-          <span className="bg-gray-800 px-4 py-2 rounded-lg">Solana</span>
+          {/* <span className="bg-gray-800 px-4 py-2 rounded-lg">Blockchain</span> */}
+          {/* <span className="bg-gray-800 px-4 py-2 rounded-lg">Solana</span> */}
           <span className="bg-gray-800 px-4 py-2 rounded-lg">DevOps</span>
           <span className="bg-gray-800 px-4 py-2 rounded-lg">GitHub</span>
         </div>
       </section>
+
+      <div className="justify-center justify-items-center">
+        <GitHubCalendar username="saurabhhh777"/>
+      </div>
 
       {/* Projects Section */}
       <section className="py-10">
