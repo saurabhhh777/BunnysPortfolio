@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       <div className="justify-center justify-items-center">
-      <div className="font-poppin p-6 text-2xl font-semibold"><a href="https://github.com/saurabhhh777" className="hover:text-blue-700">Github</a> Contributions</div>
+      <div className="font-poppin p-6 text-2xl font-semibold"><a href="https://github.com/saurabhhh777" target="_blank" className="hover:text-blue-700">Github</a> Contributions</div>
         <GitHubCalendar username="saurabhhh777"/>
       </div>
 
