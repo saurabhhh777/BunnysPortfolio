@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Github, Globe } from "lucide-react";
 import GitHubCalendar from "react-github-calendar";
+import Leetcodecalendar from "../Leetcodecalendar";
 
 
 export default function Home() {
@@ -124,6 +125,10 @@ export default function Home() {
 
       <div className="justify-center justify-items-center">
         <GitHubCalendar username="saurabhhh777"/>
+      </div>
+
+      <div>
+        <Leetcodecalendar username={"saurabhhh777"} graph="yearly"/>
       </div>
 
       {/* Projects Section */}
