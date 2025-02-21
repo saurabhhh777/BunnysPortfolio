@@ -59,7 +59,7 @@ const Leetcodecalendar = ({ username, graph = "default" }) => {
     <div className="bg-[#101828] text-white p-4">
       <div className="flex flex-col items-center">
         <h2 className="text-lg font-semibold mb-2">
-          {graph === "yearly" ? "Last Year's LeetCode Submissions" : "LeetCode Submissions"}
+          {graph === "yearly" ? ( <div className="font-poppin text-2xl p-6">LeetCode Submissions</div>) : ( <div className="font-poppin">LeetCode Submissions</div>)}
         </h2>
         {filteredData.length > 0 ? (
           <ActivityCalendar

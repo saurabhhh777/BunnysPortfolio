@@ -124,6 +124,7 @@ export default function Home() {
       </section>
 
       <div className="justify-center justify-items-center">
+      <div className="font-poppin p-6 text-2xl font-semibold">Github Contributions</div>
         <GitHubCalendar username="saurabhhh777"/>
       </div>
 
