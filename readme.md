@@ -30,7 +30,7 @@ git clone https://github.com/saurabhhh777/BunnysPortfolio.git
 cd BunnysPortfolio
 
 # Navigate to the Next.js project
-cd portfolio-nextjs
+cd frontend
 
 # Install dependencies
 npm install
@@ -42,7 +42,7 @@ npm run dev
 ## 📁 Project Structure
 ```
 BunnysPortfolio/
-├── portfolio-nextjs/          # Next.js portfolio application
+├── frontend/                 # Next.js portfolio application
 │   ├── src/
 │   │   ├── app/              # App router components
 │   │   │   ├── components/   # Reusable components
