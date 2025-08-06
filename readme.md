@@ -29,8 +29,7 @@ Welcome to my personal portfolio website! This showcases my projects, skills, an
 git clone https://github.com/saurabhhh777/BunnysPortfolio.git
 cd BunnysPortfolio
 
-# Navigate to the Next.js project
-cd frontend
+# The Next.js project is in the root directory
 
 # Install dependencies
 npm install
@@ -42,16 +41,18 @@ npm run dev
 ## 📁 Project Structure
 ```
 BunnysPortfolio/
-├── frontend/                 # Next.js portfolio application
-│   ├── src/
-│   │   ├── app/              # App router components
-│   │   │   ├── components/   # Reusable components
-│   │   │   └── page.tsx      # Main portfolio page
+├── src/                      # Source code
+│   ├── app/                  # App router components
+│   │   ├── components/       # Reusable components
+│   │   │   └── DarkModeToggle.tsx
+│   │   ├── page.tsx          # Main portfolio page
+│   │   ├── layout.tsx        # Root layout
 │   │   └── globals.css       # Global styles
-│   ├── public/               # Static assets
-│   │   └── resume.pdf        # Resume file
-│   └── package.json          # Dependencies
-└── readme.md                 # This file
+├── public/                   # Static assets
+│   └── resume.pdf            # Resume file
+├── package.json              # Dependencies
+├── vercel.json              # Vercel configuration
+└── readme.md                # This file
 ```
 
 ## 🎨 Key Components
