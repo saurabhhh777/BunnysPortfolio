@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd portfolio-nextjs && npm run build",
+  "buildCommand": "cd portfolio-nextjs && npm install && npm run build",
   "outputDirectory": "portfolio-nextjs/.next",
-  "installCommand": "cd portfolio-nextjs && npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "installCommand": "cd portfolio-nextjs && npm install"
 } 
