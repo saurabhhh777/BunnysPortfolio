@@ -1,38 +1,74 @@
-# 🚀 My Portfolio
+# 🚀 Saurabh Maurya - Portfolio
 
-Welcome to my personal portfolio website! This showcases my projects, skills, and experiences as a MERN stack developer.
+Welcome to my personal portfolio website! This showcases my projects, skills, and experiences as a Full-Stack Developer with expertise in MERN stack and Web3 development.
 
 ## 🌐 Live Demo
 🔗 [Visit My Portfolio](https://www.asksaurabh.xyz/)
 
 ## 🛠 Tech Stack
-- React.js
-- Tailwind CSS
-- Vercel (for deployment)
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS 4
+- **Icons**: Heroicons, Lucide React, React Icons
+- **Deployment**: Vercel
+- **Additional**: Framer Motion (for animations)
 
-## 📸 Screenshots
-![Portfolio Screenshot](https://github.com/user-attachments/assets/409599c1-4072-4aa0-a153-2bafd9f590df)
-![Portfolio Screenshot](https://github.com/user-attachments/assets/bc3d49a6-cb46-4ee5-af9e-4df8e2a24435)
-![Portfolio Screenshot](https://github.com/user-attachments/assets/91594960-d777-48bf-a5f1-dc68f91bb740)
-![Portfolio Screenshot](https://github.com/user-attachments/assets/eb8afa57-0e44-4a18-b016-a744012c6637)
+
 
 ## 🚀 Features
-- Fully responsive design 📱
-- Project showcase with live demo links 🛠️
-<!-- - Contact form integration 📩 -->
+- **Modern Design**: Clean, responsive design with dark/light mode toggle 🌙☀️
+- **Project Showcase**: Featured and all projects with live demo links 🛠️
+- **Skills Section**: Organized by categories (Languages, Frameworks, Databases, etc.) 💻
+- **Education & Experience**: Academic background and open source contributions 📚
+- **Contact Integration**: Direct links to social profiles and email 📞
+- **Resume Download**: Easy access to downloadable resume 📄
+- **Smooth Animations**: Enhanced user experience with subtle animations ✨
 
 ## 🛠 Installation & Setup
 ```bash
-git clone https://github.com/yourusername/your-portfolio.git
+# Clone the repository
+git clone https://github.com/saurabhhh777/BunnysPortfolio.git
 cd BunnysPortfolio
-cd frontend
+
+# Navigate to the Next.js project
+cd portfolio-nextjs
+
+# Install dependencies
 npm install
-npm start 
+
+# Run development server
+npm run dev
 ```
 
+## 📁 Project Structure
+```
+BunnysPortfolio/
+├── portfolio-nextjs/          # Next.js portfolio application
+│   ├── src/
+│   │   ├── app/              # App router components
+│   │   │   ├── components/   # Reusable components
+│   │   │   └── page.tsx      # Main portfolio page
+│   │   └── globals.css       # Global styles
+│   ├── public/               # Static assets
+│   │   └── resume.pdf        # Resume file
+│   └── package.json          # Dependencies
+└── readme.md                 # This file
+```
 
+## 🎨 Key Components
+- **DarkModeToggle**: Smooth dark/light mode switching
+- **Project Cards**: Interactive project showcase with tech stack
+- **Skills Grid**: Organized skill categories
+- **Education Timeline**: Academic background display
+- **Open Source Contributions**: GitHub PRs and contributions
+
+## 🚀 Deployment
+The portfolio is deployed on Vercel and automatically updates on push to main branch.
 
 ## 📞 Contact Me
-LinkedIn: [Saurabh Maurya](https://www.linkedin.com/in/saurabh-maurya-92b727245/)
-Twitter: [@saurabhhh777](https://twitter.com/saurabhhh777)
-Email: saurabhhhere@gmail.com
+- **LinkedIn**: [Saurabh Maurya](https://www.linkedin.com/in/saurabh-maurya-92b727245/)
+- **GitHub**: [@saurabhhh777](https://github.com/saurabhhh777)
+- **Twitter**: [@askbunnyyy](https://x.com/askbunnyyy)
+- **Email**: saurabhhhere@gmail.com
+
+## 📄 License
+This project is open source and available under the MIT License.
