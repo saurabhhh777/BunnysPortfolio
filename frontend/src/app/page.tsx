@@ -4,6 +4,7 @@ import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import { Github, Globe, ExternalLink } from 'lucide-react';
 import clsx from 'clsx';
 import DarkModeToggle from './components/DarkModeToggle';
+import GitHubCalendarWrapper from './components/GitHubCalendar';
 
 export default function Home() {
   const projects = [
@@ -132,35 +133,7 @@ export default function Home() {
     }
   ];
 
-  const openSourceContributions = [
-    {
-      name: "Dub",
-      repo: "https://github.com/dubinc/dub",
-      pr: "https://github.com/dubinc/dub/pull/2713",
-      description: "Fixed redirect loop issue in workspace middleware",
-      type: "Bug Fix",
-      status: "Open",
-      date: "Aug 2025"
-    },
-    {
-      name: "Activepieces",
-      repo: "https://github.com/activepieces/activepieces",
-      pr: "https://github.com/activepieces/activepieces/pull/8656",
-      description: "Enhanced API integration and error handling",
-      type: "Feature",
-      status: "Open",
-      date: "Jul 2025"
-    },
-    {
-      name: "Cal.com",
-      repo: "https://github.com/calcom/cal.com",
-      pr: "https://github.com/calcom/cal.com/pull/22891",
-      description: "Improved scheduling system performance",
-      type: "Performance",
-      status: "Open",
-      date: "Jun 2025"
-    }
-  ];
+  
 
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/saurabhhh777", icon: FaGithub },
@@ -267,26 +240,28 @@ export default function Home() {
             {education.map((edu, index) => (
               <div 
                 key={index} 
-                className="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-slide-up hover:-translate-y-1"
+                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
-                  <FaGraduationCap className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
-                        {edu.institution}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400">{edu.location}</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                        {edu.degree} in {edu.field}
-                      </p>
-                    </div>
-                    <div className="text-right text-sm text-gray-500 dark:text-gray-400">
-                      <p>{edu.duration}</p>
-                      <p className="text-green-600 dark:text-green-400 font-medium">{edu.status}</p>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-orange-400 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+                    <FaGraduationCap className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                          {edu.institution}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">{edu.location}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                          {edu.degree} in {edu.field}
+                        </p>
+                      </div>
+                      <div className="text-right text-sm text-gray-500 dark:text-gray-400">
+                        <p>{edu.duration}</p>
+                        <p className="text-green-600 dark:text-green-400 font-medium">{edu.status}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -295,57 +270,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Open Source Contributions - Horizontal Layout */}
-        <section className="container-custom py-16">
-          <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">Open Source Contributions</h2>
-          <div className="space-y-6">
-            {openSourceContributions.map((contribution, index) => (
-              <div 
-                key={index} 
-                className="flex items-start gap-4 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-slide-up hover:-translate-y-1 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
-                  {contribution.name.charAt(0)}
-                </div>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
-                        {contribution.name}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
-                        {contribution.description}
-                      </p>
-                    </div>
-                    <div className="text-right text-sm text-gray-500 dark:text-gray-400">
-                      <p className="text-yellow-600 font-medium">{contribution.status}</p>
-                      <p>{contribution.date}</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-3 mt-3">
-                    <a
-                      href={contribution.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-                    >
-                      Repository
-                    </a>
-                    <a
-                      href={contribution.pr}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-blue-500 hover:text-blue-700 transition-colors font-medium"
-                    >
-                      View PR →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Skills Section */}
         <section className="container-custom py-16">
@@ -413,6 +337,23 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* GitHub Activity Calendar */}
+        <section className="container-custom py-16">
+          <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">GitHub Activity</h2>
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="flex items-center justify-center mb-6">
+              <FaGithub className="w-6 h-6 text-gray-600 dark:text-gray-400 mr-3" />
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">My Coding Journey</h3>
+            </div>
+            <div className="flex justify-center">
+              <GitHubCalendarWrapper />
+            </div>
+            <div className="text-center mt-6 text-sm text-gray-600 dark:text-gray-400">
+              <p>Contributions in the last year • <a href="https://github.com/saurabhhh777" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition-colors">View Profile</a></p>
             </div>
           </div>
         </section>
