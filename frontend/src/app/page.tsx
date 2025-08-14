@@ -174,15 +174,15 @@ export default function Home() {
               <div className="animate-fade-in">
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">Hello ,</p>
                 <h1 className="text-6xl font-bold mb-4 animate-slide-up">
-                  I'm Saurabh <span className="text-blue-500 animate-pulse">*</span>
+                  I&apos;m Saurabh <span className="text-blue-500 animate-pulse">*</span>
                 </h1>
               </div>
 
               {/* About Section */}
               <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
-                  Hi! I'm a Full-Stack Developer based in India. Everyday I learn, read and practice to create the best applications possible. 
-                  It's beautiful to have a passion and a work at the same time, don't you think?
+                  Hi! I&apos;m a Full-Stack Developer based in India. Everyday I learn, read and practice to create the best applications possible. 
+                  It&apos;s beautiful to have a passion and a work at the same time, don&apos;t you think?
                 </p>
               </div>
 
@@ -207,14 +207,14 @@ export default function Home() {
               {/* Footnotes */}
               <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <p><span className="text-blue-500">*</span> A very passionate and competent person open to freelance offers and full-time opportunities.</p>
-                <p><span className="text-blue-500">**</span> if you want my portfolio, ask me. I don't bite.</p>
+                <p><span className="text-blue-500">**</span> if you want my portfolio, ask me. I don&apos;t bite.</p>
               </div>
             </div>
 
             {/* Social Links Sidebar */}
             <div className="lg:col-span-1">
               <div className="flex lg:flex-col gap-6 lg:gap-4 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
@@ -487,7 +487,7 @@ export default function Home() {
         {/* Contact Section */}
         <section className="container-custom py-16">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8 animate-fade-in">Let's Connect</h2>
+            <h2 className="text-3xl font-bold mb-8 animate-fade-in">Let&apos;s Connect</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
               Feel free to reach out!
