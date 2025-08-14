@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFileAlt, FaComments, FaGraduationCap } from 'react-icons/fa';
 import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
-import { Github, Globe, ExternalLink } from 'lucide-react';
 import clsx from 'clsx';
 import DarkModeToggle from './components/DarkModeToggle';
 import GitHubCalendarWrapper from './components/GitHubCalendar';
