@@ -1,7 +1,6 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFileAlt, FaComments, FaGraduationCap } from 'react-icons/fa';
 import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import DarkModeToggle from './components/DarkModeToggle';
 import GitHubCalendarWrapper from './components/GitHubCalendar';
 
 export default function Home() {
@@ -142,26 +141,24 @@ export default function Home() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'Web 2': 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-      'Web 3': 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-      'Blockchain': 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
-      'AI/ML': 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200',
-      'Productivity': 'bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200',
-      'Communication': 'bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200',
-      'Utility': 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
-      'Backend': 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200',
-      'Business': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
+      'Web 2': 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200',
+      'Web 3': 'bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200',
+      'Blockchain': 'bg-gray-400 dark:bg-gray-500 text-gray-800 dark:text-gray-200',
+      'AI/ML': 'bg-gray-500 dark:bg-gray-400 text-gray-800 dark:text-gray-200',
+      'Productivity': 'bg-gray-600 dark:bg-gray-300 text-gray-800 dark:text-gray-200',
+      'Communication': 'bg-gray-700 dark:bg-gray-200 text-gray-800 dark:text-gray-200',
+      'Utility': 'bg-gray-800 dark:bg-gray-100 text-gray-800 dark:text-gray-200',
+      'Backend': 'bg-gray-900 dark:bg-gray-50 text-gray-800 dark:text-gray-200',
+      'Business': 'bg-gray-950 dark:bg-gray-100 text-gray-800 dark:text-gray-200'
     };
-    return colors[category as keyof typeof colors] || 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200';
+    return colors[category as keyof typeof colors] || 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200';
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-      {/* Dark Mode Toggle */}
-      <DarkModeToggle />
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A] text-[#262626] dark:text-[#F5F5F5] transition-colors duration-300">
       
       {/* Grid Background */}
-      <div className="fixed inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+      <div className="fixed inset-0 grid-background pointer-events-none"></div>
       
       {/* Main Content */}
       <div className="relative z-10">
@@ -172,15 +169,15 @@ export default function Home() {
             <div className="lg:col-span-3 space-y-8">
               {/* Greeting */}
               <div className="animate-fade-in">
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">Hello ,</p>
+                <p className="text-lg text-[#737373] dark:text-[#A3A3A3] mb-2">Hello ,</p>
                 <h1 className="text-6xl font-bold mb-4 animate-slide-up">
-                  I&apos;m Saurabh <span className="text-blue-500 animate-pulse">*</span>
+                  I&apos;m Saurabh <span className="text-[#525252] dark:text-[#D4D4D4] animate-pulse">*</span>
                 </h1>
               </div>
 
               {/* About Section */}
               <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+                <p className="text-lg text-[#525252] dark:text-[#D4D4D4] leading-relaxed max-w-3xl">
                   Hi! I&apos;m a Full-Stack Developer based in India. Everyday I learn, read and practice to create the best applications possible. 
                   It&apos;s beautiful to have a passion and a work at the same time, don&apos;t you think?
                 </p>
@@ -190,14 +187,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <a 
                   href="/resume.pdf" 
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105"
                 >
                   <FaFileAlt className="w-5 h-5" />
-                  <span>If you want my resume <span className="text-blue-500">**</span></span>
+                  <span>If you want my resume <span className="text-[#262626] dark:text-[#F5F5F5]">**</span></span>
                 </a>
                 <a 
-                  href="mailto:saurabh.maurya@example.com" 
-                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 transition-all duration-300 hover:scale-105"
+                  href="mailto:saurabhhhere@gmail.com" 
+                  className="flex items-center gap-2 text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105"
                 >
                   <FaComments className="w-5 h-5" />
                   <span>Or have a chat</span>
@@ -205,9 +202,9 @@ export default function Home() {
               </div>
 
               {/* Footnotes */}
-              <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <p><span className="text-blue-500">*</span> A very passionate and competent person open to freelance offers and full-time opportunities.</p>
-                <p><span className="text-blue-500">**</span> if you want my portfolio, ask me. I don&apos;t bite.</p>
+              <div className="text-sm text-[#737373] dark:text-[#A3A3A3] space-y-1 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <p><span className="text-[#262626] dark:text-[#F5F5F5]">*</span> A very passionate and competent person open to freelance offers and full-time opportunities.</p>
+                <p><span className="text-[#262626] dark:text-[#F5F5F5]">**</span> if you want my portfolio, ask me. I don&apos;t bite.</p>
               </div>
             </div>
 
@@ -220,7 +217,7 @@ export default function Home() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-105 font-medium"
+                    className="text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105 font-medium"
                     style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
                   >
                     {social.name}
@@ -238,27 +235,27 @@ export default function Home() {
             {education.map((edu, index) => (
               <div 
                 key={index} 
-                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl p-6 shadow-sm border border-[#E5E5E5] dark:border-[#404040] hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-orange-400 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
                     <FaGraduationCap className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <h3 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                        <h3 className="font-semibold text-lg text-[#262626] dark:text-[#F5F5F5] group-hover:text-[#525252] dark:group-hover:text-[#D4D4D4] transition-colors">
                           {edu.institution}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm">{edu.location}</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        <p className="text-[#737373] dark:text-[#A3A3A3] text-sm">{edu.location}</p>
+                        <p className="text-sm text-[#737373] dark:text-[#A3A3A3] mt-1">
                           {edu.degree} in {edu.field}
                         </p>
                       </div>
-                      <div className="text-right text-sm text-gray-500 dark:text-gray-400">
+                      <div className="text-right text-sm text-[#737373] dark:text-[#A3A3A3]">
                         <p>{edu.duration}</p>
-                        <p className="text-green-600 dark:text-green-400 font-medium">{edu.status}</p>
+                        <p className="text-[#525252] dark:text-[#D4D4D4] font-medium">{edu.status}</p>
                       </div>
                     </div>
                   </div>
@@ -275,12 +272,12 @@ export default function Home() {
           <div className="space-y-8">
             {/* Programming Languages */}
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-300">Programming Languages</h3>
+              <h3 className="text-xl font-semibold mb-4 text-center text-[#525252] dark:text-[#D4D4D4]">Programming Languages</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {skills.slice(0, 4).map((skill, index) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 hover:scale-105"
+                    className="px-4 py-2 bg-white dark:bg-[#1A1A1A] border border-[#E5E5E5] dark:border-[#404040] rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-[#A3A3A3] dark:hover:border-[#8A8A8A] hover:scale-105 text-[#525252] dark:text-[#D4D4D4]"
                     style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                   >
                     {skill}
@@ -291,12 +288,12 @@ export default function Home() {
 
             {/* Frameworks/Libraries */}
             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-300">Frameworks & Libraries</h3>
+              <h3 className="text-xl font-semibold mb-4 text-center text-[#525252] dark:text-[#D4D4D4]">Frameworks & Libraries</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {skills.slice(4, 12).map((skill, index) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 hover:scale-105"
+                    className="px-4 py-2 bg-white dark:bg-[#1A1A1A] border border-[#E5E5E5] dark:border-[#404040] rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-[#A3A3A3] dark:hover:border-[#8A8A8A] hover:scale-105 text-[#525252] dark:text-[#D4D4D4]"
                     style={{ animationDelay: `${0.4 + index * 0.05}s` }}
                   >
                     {skill}
@@ -307,12 +304,12 @@ export default function Home() {
 
             {/* Databases */}
             <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <h3 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-300">Databases</h3>
+              <h3 className="text-xl font-semibold mb-4 text-center text-[#525252] dark:text-[#D4D4D4]">Databases</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {skills.slice(12, 15).map((skill, index) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 hover:scale-105"
+                    className="px-4 py-2 bg-white dark:bg-[#1A1A1A] border border-[#E5E5E5] dark:border-[#404040] rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-[#A3A3A3] dark:hover:border-[#8A8A8A] hover:scale-105 text-[#525252] dark:text-[#D4D4D4]"
                     style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                   >
                     {skill}
@@ -323,12 +320,12 @@ export default function Home() {
 
             {/* Additional Skills */}
             <div className="animate-fade-in" style={{ animationDelay: '0.7s' }}>
-              <h3 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-300">Additional Skills</h3>
+              <h3 className="text-xl font-semibold mb-4 text-center text-[#525252] dark:text-[#D4D4D4]">Additional Skills</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {skills.slice(15).map((skill, index) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 hover:scale-105"
+                    className="px-4 py-2 bg-white dark:bg-[#1A1A1A] border border-[#E5E5E5] dark:border-[#404040] rounded-lg text-sm font-medium hover:shadow-md transition-all duration-300 hover:border-[#A3A3A3] dark:hover:border-[#8A8A8A] hover:scale-105 text-[#525252] dark:text-[#D4D4D4]"
                     style={{ animationDelay: `${0.8 + index * 0.05}s` }}
                   >
                     {skill}
@@ -342,16 +339,16 @@ export default function Home() {
         {/* GitHub Activity Calendar */}
         <section className="container-custom py-16">
           <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">GitHub Activity</h2>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="bg-white dark:bg-[#1A1A1A] rounded-xl p-8 shadow-sm border border-[#E5E5E5] dark:border-[#404040] animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="flex items-center justify-center mb-6">
-              <FaGithub className="w-6 h-6 text-gray-600 dark:text-gray-400 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">My Coding Journey</h3>
+              <FaGithub className="w-6 h-6 text-[#525252] dark:text-[#D4D4D4] mr-3" />
+              <h3 className="text-xl font-semibold text-[#262626] dark:text-[#F5F5F5]">My Coding Journey</h3>
             </div>
             <div className="flex justify-center">
               <GitHubCalendarWrapper />
             </div>
-            <div className="text-center mt-6 text-sm text-gray-600 dark:text-gray-400">
-              <p>Contributions in the last year • <a href="https://github.com/saurabhhh777" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition-colors">View Profile</a></p>
+            <div className="text-center mt-6 text-sm text-[#737373] dark:text-[#A3A3A3]">
+              <p>Contributions in the last year • <a href="https://github.com/saurabhhh777" target="_blank" rel="noopener noreferrer" className="text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-colors">View Profile</a></p>
             </div>
           </div>
         </section>
@@ -363,12 +360,12 @@ export default function Home() {
             {projects.filter(p => p.featured).map((project, index) => (
               <div 
                 key={index} 
-                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl p-6 shadow-sm border border-[#E5E5E5] dark:border-[#404040] hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                       {project.name}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{project.category}</p>
@@ -387,13 +384,13 @@ export default function Home() {
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md font-medium"
+                      className="text-xs bg-[#F5F5F5] dark:bg-[#262626] text-[#525252] dark:text-[#D4D4D4] px-2 py-1 rounded-md font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
+                <div className="flex gap-3 pt-4 border-t border-[#E5E5E5] dark:border-[#404040]">
                   <a
                     href={project.repo}
                     target="_blank"
@@ -427,12 +424,12 @@ export default function Home() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl p-6 shadow-sm border border-[#E5E5E5] dark:border-[#404040] hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
                       {project.name}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{project.category}</p>
@@ -451,18 +448,18 @@ export default function Home() {
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md font-medium"
+                      className="text-xs bg-[#F5F5F5] dark:bg-[#262626] text-[#525252] dark:text-[#D4D4D4] px-2 py-1 rounded-md font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
+                <div className="flex gap-3 pt-4 border-t border-[#E5E5E5] dark:border-[#404040]">
                   <a
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                    className="flex items-center gap-2 text-sm text-[#737373] dark:text-[#A3A3A3] hover:text-[#525252] dark:hover:text-[#D4D4D4] transition-colors"
                   >
                     <CodeBracketIcon className="w-4 h-4" />
                     Source
@@ -472,7 +469,7 @@ export default function Home() {
                       href={project.site}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                      className="flex items-center gap-2 text-sm text-[#737373] dark:text-[#A3A3A3] hover:text-[#525252] dark:hover:text-[#D4D4D4] transition-colors"
                     >
                       <RocketLaunchIcon className="w-4 h-4" />
                       Live
@@ -488,7 +485,7 @@ export default function Home() {
         <section className="container-custom py-16">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8 animate-fade-in">Let&apos;s Connect</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg text-[#737373] dark:text-[#A3A3A3] mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
               Feel free to reach out!
             </p>
@@ -499,10 +496,10 @@ export default function Home() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                  className="p-4 bg-white dark:bg-[#1A1A1A] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-[#E5E5E5] dark:border-[#404040]"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
-                  <social.icon className="w-6 h-6 text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" />
+                  <social.icon className="w-6 h-6 text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-colors" />
                 </a>
               ))}
             </div>
@@ -510,10 +507,10 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="container-custom py-8 border-t border-gray-200 dark:border-gray-700">
-          <div className="text-center text-gray-500 dark:text-gray-400">
+        <footer className="container-custom py-8 border-t border-[#E5E5E5] dark:border-[#404040]">
+          <div className="text-center text-[#737373] dark:text-[#A3A3A3]">
             <p>© 2025 Saurabh Maurya. All rights reserved.</p>
-            <p className="text-sm mt-2">Open source under MIT License and available on <a href="https://github.com/saurabhhh777" className="text-blue-500 hover:text-blue-600 transition-colors">GitHub</a></p>
+            <p className="text-sm mt-2">Open source under MIT License and available on <a href="https://github.com/saurabhhh777" className="text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-colors">GitHub</a></p>
           </div>
         </footer>
       </div>

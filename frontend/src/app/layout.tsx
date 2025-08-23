@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "./components/ThemeProvider";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,34 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('theme-storage');
-                  if (theme) {
-                    var parsedTheme = JSON.parse(theme);
-                    if (parsedTheme.state && parsedTheme.state.isDark) {
-                      document.documentElement.classList.add('dark');
-                    } else {
-                      document.documentElement.classList.remove('dark');
-                    }
-                  } else {
-                    // Default to light mode
-                    document.documentElement.classList.remove('dark');
-                  }
-                } catch (e) {
-                  // Fallback to light mode if localStorage is not available
-                  document.documentElement.classList.remove('dark');
-                }
-              })();
-            `,
-          }}
-        />
       </head>
-      <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200`}>
-        {children}
+      <body className={`${inter.className} bg-[#FAFAFA] dark:bg-[#0A0A0A] text-[#262626] dark:text-[#F5F5F5] transition-colors duration-300`}>
+        <ThemeProvider>
+          <DarkModeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

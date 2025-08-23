@@ -1,7 +1,7 @@
 'use client';
 
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 import { useThemeStore } from '../../store/themeStore';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
 export default function DarkModeToggle() {
   const { isDark, toggleTheme } = useThemeStore();
@@ -9,14 +9,21 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-200 dark:border-gray-600"
+      className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-110 group"
       aria-label="Toggle dark mode"
     >
-      {isDark ? (
-        <SunIcon className="w-5 h-5 text-yellow-500" />
-      ) : (
-        <MoonIcon className="w-5 h-5 text-gray-600" />
-      )}
+      <div className="relative w-6 h-6">
+        <SunIcon 
+          className={`w-6 h-6 text-yellow-500 transition-all duration-300 ${
+            isDark ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'
+          }`}
+        />
+        <MoonIcon 
+          className={`absolute top-0 left-0 w-6 h-6 text-blue-500 transition-all duration-300 ${
+            isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'
+          }`}
+        />
+      </div>
     </button>
   );
 } 
