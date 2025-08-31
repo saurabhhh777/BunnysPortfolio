@@ -2,7 +2,7 @@
 
 import { track } from '@vercel/analytics';
 
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const trackEvent = (eventName: string, properties?: Record<string, string | number | boolean>) => {
   track(eventName, properties);
 };
 

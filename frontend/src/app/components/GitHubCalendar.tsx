@@ -1,11 +1,8 @@
 'use client';
 
 import GitHubCalendar from 'react-github-calendar';
-import { useThemeStore } from '../../store/themeStore';
 
 export default function GitHubCalendarWrapper() {
-  const { isDark } = useThemeStore();
-
   return (
     <GitHubCalendar 
       username="saurabhhh777"
