@@ -5,6 +5,7 @@ import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import GitHubCalendarWrapper from './components/GitHubCalendar';
 import { track } from '@vercel/analytics';
+import Masonry from 'react-masonry-css';
 
 export default function Home() {
   const projects = [
@@ -13,7 +14,7 @@ export default function Home() {
       repo: "https://github.com/saurabhhh777/react-leetcode-calendar",
       site: "https://www.npmjs.com/package/react-leetcode-calendar",
       docs: "https://react-leetcode-calendar-docs.vercel.app/?path=/docs/react-leetcode-calendar-leetcodecalendar--docs",
-      description: "A customizable React component that visualizes LeetCode submissions in a GitHub-style contribution calendar.",
+      description: "A customizable React component that visualizes LeetCode submissions in a GitHub-style contribution calendar. Achieved 600+ downloads in the first week of launch, demonstrating strong developer adoption.",
       techStack: ["React.js", "Storybook", "NPM"],
       type: "Library",
       featured: true,
@@ -482,11 +483,19 @@ export default function Home() {
         {/* All Projects Section */}
         <section className="container-custom py-16">
           <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">All Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Masonry
+            breakpointCols={{
+              default: 3,
+              1100: 2,
+              700: 1
+            }}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="group bg-white dark:bg-[#1A1A1A] rounded-xl p-6 shadow-sm border border-[#E5E5E5] dark:border-[#404040] hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105"
+                className="group bg-white dark:bg-[#1A1A1A] rounded-xl p-6 shadow-sm border border-[#E5E5E5] dark:border-[#404040] hover:shadow-xl transition-all duration-300 animate-fade-in hover:-translate-y-1 hover:scale-105 mb-6"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="flex justify-between items-start mb-4">
@@ -521,6 +530,7 @@ export default function Home() {
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track('project_click', { projectName: project.name, projectType: project.type, action: 'source' })}
                     className="flex items-center gap-2 text-sm text-[#737373] dark:text-[#A3A3A3] hover:text-[#525252] dark:hover:text-[#D4D4D4] transition-colors"
                   >
                     <CodeBracketIcon className="w-4 h-4" />
@@ -531,6 +541,7 @@ export default function Home() {
                       href={project.site}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => track('project_click', { projectName: project.name, projectType: project.type, action: 'live' })}
                       className="flex items-center gap-2 text-sm text-[#737373] dark:text-[#A3A3A3] hover:text-[#525252] dark:hover:text-[#D4D4D4] transition-colors"
                     >
                       <RocketLaunchIcon className="w-4 h-4" />
@@ -540,7 +551,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </Masonry>
         </section>
 
         {/* Contact Section */}
