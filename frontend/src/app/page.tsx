@@ -33,7 +33,7 @@ export default function Home() {
     {
       name: "ThePrimeTime",
       repo: "https://github.com/saurabhhh777/ThePrimeTime.git",
-      site: "#",
+      site: "https://theprimetime.vercel.app",
       description: "A VS Code screen time analyzer to track your coding habits and productivity patterns.",
       techStack: ["React", "Node.js", "MongoDB", "Express"],
       type: "Web 2",
@@ -83,7 +83,7 @@ export default function Home() {
     {
       name: "WalletX",
       repo: "https://github.com/saurabhhh777/WalletX",
-      site: "https://walletx-git-master-asksaurabh.vercel.app/",
+      site: "https://walletx-wine.vercel.app",
       description: "A modern, secure multi-chain crypto wallet supporting Ethereum and Solana, built with React, TypeScript, Node.js, and MongoDB.",
       techStack: [
         "React 18", "TypeScript", "TailwindCSS", "Node.js", "Express.js",
@@ -126,7 +126,7 @@ export default function Home() {
     {
       name: "SecondBrainApp",
       repo: "https://github.com/saurabhhh777/BrainlyApp.git",
-      site: "#",
+      site: "https://primebrainapp.vercel.app/",
       description: "A digital second brain to store and organize your thoughts and ideas.",
       techStack: ["MongoDb", "Express.js", "React.js", "Node.js"],
       type: "Web 2",
