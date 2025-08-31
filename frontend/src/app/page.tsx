@@ -1,3 +1,5 @@
+'use client';
+
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFileAlt, FaComments, FaGraduationCap } from 'react-icons/fa';
 import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
@@ -6,6 +8,27 @@ import { track } from '@vercel/analytics';
 
 export default function Home() {
   const projects = [
+    {
+      name: "react-leetcode-calendar",
+      repo: "https://github.com/saurabhhh777/react-leetcode-calendar",
+      site: "https://www.npmjs.com/package/react-leetcode-calendar",
+      docs: "https://react-leetcode-calendar-docs.vercel.app/?path=/docs/react-leetcode-calendar-leetcodecalendar--docs",
+      description: "A customizable React component that visualizes LeetCode submissions in a GitHub-style contribution calendar.",
+      techStack: ["React.js", "Storybook", "NPM"],
+      type: "Library",
+      featured: true,
+      category: "Open Source"
+    },
+    {
+      name: "VoidMail.fun",
+      repo: "https://github.com/saurabhhh777/Voidmail.fun.git",
+      site: "https://voidmail.fun/",
+      description: "A free temporary email service that protects privacy by generating disposable inboxes for instant use, signups, and spam protection.",
+      techStack: ["React.js", "Node.js", "Zustand", "AWS EC2", "NGINX", "Certbot"],
+      type: "Web 3",
+      featured: true,
+      category: "Blockchain"
+    },
     {
       name: "ThePrimeTime",
       repo: "https://github.com/saurabhhh777/ThePrimeTime.git",
@@ -17,24 +40,67 @@ export default function Home() {
       category: "Productivity"
     },
     {
-      name: "ChatApp",
-      repo: "https://github.com/saurabhhh777/ChatApp.git",
-      site: "#",
-      description: "A real-time chat application with end-to-end encryption and modern UI.",
-      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
-      type: "Web 2",
-      featured: true,
-      category: "Communication"
-    },
-    {
       name: "FaceDetection",
       repo: "https://github.com/saurabhhh777/FaceDetection.git",
       site: "https://appface-detect.vercel.app/",
       description: "A face detection app leveraging AI-powered models for real-time recognition.",
       techStack: ["TensorFlow.js", "React"],
       type: "Web 2",
-      featured: true,
+      featured: false,
       category: "AI/ML"
+    },
+    {
+      name: "CryptoLift",
+      repo: "https://github.com/saurabhhh777/CryptoLift.git",
+      site: "https://token-launch-pad.vercel.app/",
+      description: "A platform to launch and manage new crypto tokens with smart contracts.",
+      techStack: ["Solana", "React"],
+      type: "Web 3",
+      featured: false,
+      category: "Blockchain"
+    },
+    {
+      name: "OrbitMail",
+      repo: "https://github.com/saurabhhh777/OrbitMail",
+      site: "https://orbitmail.fun/",
+      description: "A platform to create and manage professional email addresses on custom domains without relying on Gmail or third-party providers.",
+      techStack: ["Next.js", "Node.js", "MongoDB"],
+      type: "Web 2",
+      featured: false,
+      category: "Email Infrastructure"
+    },
+    {
+      name: "ChatApp",
+      repo: "https://github.com/saurabhhh777/ChatApp.git",
+      site: "#",
+      description: "A real-time chat application with end-to-end encryption and modern UI.",
+      techStack: ["MongoDB", "Express.js", "React.js", "Node.js"],
+      type: "Web 2",
+      featured: false,
+      category: "Communication"
+    },
+    {
+      name: "WalletX",
+      repo: "https://github.com/saurabhhh777/WalletX",
+      site: "https://walletx-git-master-asksaurabh.vercel.app/",
+      description: "A modern, secure multi-chain crypto wallet supporting Ethereum and Solana, built with React, TypeScript, Node.js, and MongoDB.",
+      techStack: [
+        "React 18", "TypeScript", "TailwindCSS", "Node.js", "Express.js",
+        "MongoDB", "Mongoose", "Passport.js", "JWT", "Ethers.js", "@solana/web3.js"
+      ],
+      type: "Web 3",
+      featured: false,
+      category: "Wallet"
+    },
+    {
+      name: "SwapX",
+      repo: "https://github.com/saurabhhh777/SwapX",
+      site: "https://swap-x-chi.vercel.app/",
+      description: "A decentralized swapping platform for Ethereum and Solana tokens, powered by smart contracts and real-time exchange rates for fast, secure, low-fee transactions.",
+      techStack: ["Solidity", "React", "Ethers.js", "@solana/web3.js"],
+      type: "Web 3",
+      featured: false,
+      category: "DeFi"
     },
     {
       name: "Image Converter",
@@ -53,7 +119,7 @@ export default function Home() {
       description: "A faucet to distribute Solana Devnet tokens for development and testing.",
       techStack: ["Solana", "React"],
       type: "Web 3",
-      featured: true,
+      featured: false,
       category: "Blockchain"
     },
     {
@@ -95,16 +161,6 @@ export default function Home() {
       type: "Web 2",
       featured: false,
       category: "Business"
-    },
-    {
-      name: "TokenLaunchPad",
-      repo: "https://github.com/saurabhhh777/CryptoLift.git",
-      site: "https://token-launch-pad.vercel.app/",
-      description: "A platform to launch and manage new crypto tokens with smart contracts.",
-      techStack: ["Solana", "React"],
-      type: "Web 3",
-      featured: false,
-      category: "Blockchain"
     }
   ];
 
