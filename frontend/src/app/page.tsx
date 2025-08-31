@@ -2,6 +2,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFileAlt, FaComments, FaG
 import { CodeBracketIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import GitHubCalendarWrapper from './components/GitHubCalendar';
+import { track } from '@vercel/analytics';
 
 export default function Home() {
   const projects = [
@@ -38,7 +39,7 @@ export default function Home() {
     {
       name: "Image Converter",
       repo: "https://github.com/saurabhhh777/ImgConverter.git",
-      site: "#",
+      site: "https://imgconvert7.vercel.app",
       description: "A tool to convert images between different formats effortlessly with batch processing.",
       techStack: ["Express", "React", "Node", "TypeScript"],
       type: "Web 2",
@@ -97,7 +98,7 @@ export default function Home() {
     },
     {
       name: "TokenLaunchPad",
-      repo: "https://github.com/saurabhhh777/TokenLaunchPad.git",
+      repo: "https://github.com/saurabhhh777/CryptoLift.git",
       site: "https://token-launch-pad.vercel.app/",
       description: "A platform to launch and manage new crypto tokens with smart contracts.",
       techStack: ["Solana", "React"],
@@ -187,6 +188,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <a 
                   href="/resume.pdf" 
+                  onClick={() => track('resume_download')}
                   className="flex items-center gap-2 text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105"
                 >
                   <FaFileAlt className="w-5 h-5" />
@@ -194,6 +196,7 @@ export default function Home() {
                 </a>
                 <a 
                   href="mailto:saurabhhhere@gmail.com" 
+                  onClick={() => track('contact_click', { method: 'email' })}
                   className="flex items-center gap-2 text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105"
                 >
                   <FaComments className="w-5 h-5" />
@@ -217,6 +220,7 @@ export default function Home() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track('social_click', { platform: social.name.toLowerCase() })}
                     className="text-[#525252] dark:text-[#D4D4D4] hover:text-[#262626] dark:hover:text-[#F5F5F5] transition-all duration-300 hover:scale-105 font-medium"
                     style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
                   >
@@ -395,6 +399,7 @@ export default function Home() {
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track('project_click', { projectName: project.name, projectType: project.type, action: 'source' })}
                     className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                   >
                     <CodeBracketIcon className="w-4 h-4" />
@@ -405,6 +410,7 @@ export default function Home() {
                       href={project.site}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => track('project_click', { projectName: project.name, projectType: project.type, action: 'live' })}
                       className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                     >
                       <RocketLaunchIcon className="w-4 h-4" />

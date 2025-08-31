@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./components/ThemeProvider";
 import DarkModeToggle from "./components/DarkModeToggle";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +34,8 @@ export default function RootLayout({
         <ThemeProvider>
           <DarkModeToggle />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
